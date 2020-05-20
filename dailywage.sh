@@ -1,7 +1,11 @@
 #!/bin/bash
-wage_per_hour=20
-hours_per_day=8
-read -p "enter no of days worked" days
-read -p "enter no of hours worked" hours
-hours=$(($(($days*$hours_per_day))+$hours))
-total_wage=$(($hours*wage_per_hour))
+is_present=1
+random_check=$((RANDOM%2));
+if [ $is_present -eq $random_check ];
+then
+      empRatePerHour=20;
+      empHrs=8
+      salary=$(($empHrs*empRatePerHour))
+else
+      salary=0
+fi
